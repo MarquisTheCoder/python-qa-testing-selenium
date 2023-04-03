@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 # bot dependency
-from bot import Bot
+from indeed_bot import bot
 
 # root of application
 def main():
-    Bot.run()
+    bot.Bot.run()
 
 if __name__ == "__main__":
     main()

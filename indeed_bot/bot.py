@@ -128,7 +128,6 @@ class Bot:
   __________________________________________________________________________________________________________________________\n
   """)
         
-
     class input:
 
         # making it easy to enter text into the search bar
@@ -140,6 +139,9 @@ class Bot:
             for letter in text:
                 element.send_keys(letter)
                 sleep(random.uniform(0.01, 0.08))
+
+        def search(query: str):
+            pass
 
     class page:
 
@@ -223,6 +225,8 @@ class Bot:
          
         for job_posting_link in all_job_posting_links_on_page:
              Bot.show_where_bots_going(job_posting_link.get_attribute("href"))
+             all_job_posting_applications.append(job_posting_link.get_attribute("href"))
+
 
         # pauses the page for an hour to get the developer time to inspect site code
         Bot.page.pause_page(time_in_minutes = 60)
