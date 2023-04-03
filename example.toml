@@ -1,0 +1,12 @@
+
+[indeed]
+base_url = "https://secure.indeed.com/auth?hl=en_US&continue=/" 
+
+[authentication]
+username = ""
+password = "not_johns_password"
+email = "john_doe@fakemail.com"
+
+[positions]
+developer = ["Entry level Python","Entry level java","Entry level full stack"]
+engineer = ["Software Engineer","Eomputer Engineer","Systems Engineer"]
