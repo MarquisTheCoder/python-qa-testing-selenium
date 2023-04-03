@@ -32,18 +32,14 @@ If you want to automate interactions with Binance stick around.
 If you're interested in Binance's new DEX Binance Chain see my `python-binance-chain library <https://github.com/sammchardy/python-binance-chain>`_
 
 Source code
-  https://github.com/sammchardy/python-binance
+  https://github.com/MarquisTheCoder/python-indeedbot
 
 Documentation
   https://python-binance.readthedocs.io/en/latest/
 
-Binance API Telegram
-  https://t.me/binance_api_english
+Indeed Bot Telegram
+  https://t.me/python_indeedbot
 
-Blog with examples including async
-  https://sammchardy.github.io
-
-Make sure you update often and check the `Changelog <https://python-binance.readthedocs.io/en/latest/changelog.html>`_ for new features and bug fixes.
 
 Features
 --------
