@@ -3,14 +3,14 @@
 #____________________________________________________________________________#
 #               ! < Public Service Announcement > !                          #
 #----------------------------------------------------------------------------#
-#I'm putting all of the elements I find on the indeed site 
-#inside of a class so this bot can be easy to maintain and update 
-#accordingly to the sites changes in the future. Many times
-#bot creators are single minded and don't give their creations 
+# I'm putting all of the elements I find on the indeed site 
+# inside of a class so this bot can be easy to maintain and update 
+# accordingly to the sites changes in the future. Many times
+# bot creators are single minded and don't give their creations 
 # any flexibility in their design. I'm starting out working against 
-#this problem before it becomes a problem in the future. And if you choose
-#to contribute to this pojects please approach the project with this mindset!
-#Thank you! - MarquisTheCoder
+# this problem before it becomes a problem in the future. And if you choose
+# to contribute to this pojects please approach the project with this mindset!
+# Thank you! - MarquisTheCoder
 #_____________________________________________________________________________#
 
 import configparser

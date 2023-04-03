@@ -1,6 +1,10 @@
+#!/usr/bin/python3
 
+# general dependencies
 from time import sleep
 from random import uniform
+
+# bot dependencies
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
 
@@ -17,6 +21,7 @@ class BotAvoidance:
     user_agent_rotator = UserAgent(software_names=software_names, 
                                    operating_systems=operating_systems, 
                                    limit=100)
+
     # randoming user agent within the type of a mac computer because APPLE
     def return_mac_user_agent():
         return BotAvoidance.user_agent_rotator.get_user_agents()
