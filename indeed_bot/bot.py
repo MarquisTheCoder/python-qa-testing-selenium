@@ -5,6 +5,7 @@ import random
 from time import sleep
 from typing import List
 from colored import fg, attr
+import requests
 
 # bot dependencies (custom)
 from .bot_manipulation import BotManipulation
@@ -33,7 +34,7 @@ class IndeedBot(BotManipulation):
 
     def run() -> None: 
         banner() 
-        chrome.get(f"{Indeed.login_page_url}&radius=100")
+        chrome.get(Indeed.login_page_url)
         IndeedBot.show_where_bots_going(Indeed.login_page_url)
         chrome.maximize_window()
         IndeedBot.wait_for_manual_user_login(chrome)
@@ -73,16 +74,21 @@ class IndeedBot(BotManipulation):
 
         # randomizing the delay between each typed character to mimic human typing
         IndeedBot.input.type_slowly_to_avoid_detection(search_bar, Indeed.positions[0])
- 
+
         # randomizing the delay between each search
         BotAvoidance.randomize_sleep_to_avoid_detection()
 
         IndeedBot.input.enter(search_bar)
 
+        # increasing radius to get more results
+        driver.get(f"{driver.current_url}&radius=100")
+        
         # saving root window to be returned to later after navigating to all applications
         current_window: str = IndeedBot.page.get_current_window(driver)
+
         print(f"\n root window hash -> {fg(30)} {current_window}  {attr(0)}")
 
+        
         # list will contain all posting links
         all_job_posting_applications: List[str] = []
 
@@ -92,9 +98,33 @@ class IndeedBot(BotManipulation):
         # retrieving the result links to be used for the navigating to the application pages
         all_job_posting_links_on_page: List[WebElement] = IndeedBot.page.retrieve_results_on_page(driver, 2)
          
-        for job_posting_link in all_job_posting_links_on_page:
-             IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
-             all_job_posting_applications.append(job_posting_link.get_attribute("href"))
+        page: int = 0
+
+        while(page >= 0):
+
+            if page == 0:
+                for job_posting_link in all_job_posting_links_on_page:
+                    IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
+                    all_job_posting_applications.append(job_posting_link.get_attribute("href"))
+                page += 1
+            else:
+
+                response: requests.Response = requests.get(f"{driver.current_url}&page={page}")
+                
+                if response.status_code == 200:
+
+                    driver.get(f"{driver.current_url}&page={page}")
+
+                    all_job_posting_links_on_page = IndeedBot.page.retrieve_results_on_page(driver, 2)
+
+                    for job_posting_link in all_job_posting_links_on_page:
+                        IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
+                        all_job_posting_applications.append(job_posting_link.get_attribute("href"))
+                    page += 1
+
+                
+
+
 
 
         # pauses the page for an hour to get the developer time to inspect site code

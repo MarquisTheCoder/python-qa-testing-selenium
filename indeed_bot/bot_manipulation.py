@@ -49,7 +49,7 @@ class BotManipulation:
             driver.switch_to.window(window_handle)
 
         # retrieves the result links to be used for the application
-        def retrieve_results_on_page(driver: webdriver, page: int) -> List[WebElement]:
+        def retrieve_results_on_page(driver: webdriver, page) -> List[WebElement]:
             BotManipulation.page.y_scroll_to(driver, driver.get_window_size()['height'] * page)
             BotAvoidance.randomize_sleep_to_avoid_detection()
             return driver.find_elements(By.CLASS_NAME, "jcs-JobTitle")
