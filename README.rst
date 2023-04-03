@@ -24,13 +24,13 @@ Updated 04 April 2023
     
 |
 
-This is an indeed application automation utility I wrote to make the process of applying for jobs in tech a little bit less tedious(working smarter not harder). I understand the struggle of constantly applying for jobs to only get a response back from 1 out of every hundreds. That's what this bot is for the people. If companies can automate their hiring process and filtering with robots and job board platforms. Whats so wrong with applicants doing the same thing
-vice versa? 
+This is an indeed application automation utility I wrote to make the process of applying for jobs in tech a little bit less tedious(working smarter not harder). I understand the struggle of constantly applying for jobs to only get a response back from 1 out of every hundreds. That's what this bot is for the people. 
 
-If you came here looking for the `Binance exchange <https://www.binance.com/?ref=10099792>`_ to purchase cryptocurrencies, then `go here <https://www.binance.com/?ref=10099792>`_.
-If you want to automate interactions with Binance stick around.
+If you came here looking for an application assistant you're in the right place!
 
-If you're interested in Binance's new DEX Binance Chain see my `python-binance-chain library <https://github.com/sammchardy/python-binance-chain>`_
+If you're interested in contributing the this project or need assistance, please
+don't be a stranger I'm open to emails and DM's on any of the socials listed in my 
+README
 
 Source code
   https://github.com/MarquisTheCoder/python-indeedbot
@@ -44,7 +44,6 @@ Bot Telegram
 
 Features
 --------
-
 - Bypassing Indeed login with inital manual authentication
 - Makes mulitple job searches depending on configuration
 - pagination friendly for an start and end position
@@ -54,7 +53,6 @@ Features
 
 Upgrading to v1.0.0+
 --------------------
-
 The breaking changes include the migration from wapi to sapi endpoints which related to the
 wallet endpoints detailed in the `Binance Docs <https://binance-docs.github.io/apidocs/spot/en/#wallet-endpoints>`_
 
@@ -70,7 +68,7 @@ Quick Start
 
 .. code:: bash
 
-    pip install python-binance
+    pip install -r requirements.txt
 
 
 Donate
