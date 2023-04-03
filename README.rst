@@ -24,7 +24,8 @@ Updated 04 April 2023
     
 |
 
-This is an unofficial Python wrapper for the `Binance exchange REST API v3 <https://binance-docs.github.io/apidocs/spot/en>`_. I am in no way affiliated with Binance, use at your own risk.
+This is an indeed application automation utility I wrote to make the process of applying for jobs in tech a little bit less tedious(working smarter not harder). I understand the struggle of constantly applying for jobs to only get a response back from 1 out of every hundreds. That's what this bot is for the people. If companies can automate their hiring process and filtering with robots and job board platforms. Whats so wrong with applicants doing the same thing
+vice versa? 
 
 If you came here looking for the `Binance exchange <https://www.binance.com/?ref=10099792>`_ to purchase cryptocurrencies, then `go here <https://www.binance.com/?ref=10099792>`_.
 If you want to automate interactions with Binance stick around.
