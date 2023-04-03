@@ -37,7 +37,7 @@ Source code
 Documentation
   https://python-binance.readthedocs.io/en/latest/
 
-Indeed Bot Telegram
+Bot Telegram
   https://t.me/python_indeedbot
 
 
