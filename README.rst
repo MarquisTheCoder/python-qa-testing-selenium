@@ -69,8 +69,8 @@ Click the avatar icon and head over to your profile
 .. image:: https://github.com/MarquisTheCoder/python-indeedbot/blob/main/example/resume_fill.png
     :target: https://secure.indeed.com/auth?hl=en_US&co=US&continue=https%3A%2F%2Fwww.indeed.com%2F&tmpl=desktop&service=my&from=gnav-util-homepage&   jsContinue=https%3A%2F%2Fwww.indeed.com%2F&empContinue=https%3A%2F%2Faccount.indeed.com%2Fmyaccess
     
-   |
-   
+|
+
 .. code:: bash
 
     pip install -r requirements.txt
