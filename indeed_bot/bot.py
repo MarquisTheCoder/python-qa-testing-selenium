@@ -23,6 +23,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as ec
 
+from selenium.common.exceptions import NoSuchElementException
 
 #class to handle all interactions with Indeed
 class IndeedBot(BotManipulation):
@@ -98,34 +99,23 @@ class IndeedBot(BotManipulation):
         # retrieving the result links to be used for the navigating to the application pages
         all_job_posting_links_on_page: List[WebElement] = IndeedBot.page.retrieve_results_on_page(driver, 2)
          
-        page: int = 0
+        
+        while(has_next_page := True):
 
-        while(page >= 0):
+            BotAvoidance.randomize_sleep_to_avoid_detection()
 
-            if page == 0:
-                for job_posting_link in all_job_posting_links_on_page:
-                    IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
-                    all_job_posting_applications.append(job_posting_link.get_attribute("href"))
-                page += 1
-            else:
-
-                response: requests.Response = requests.get(f"{driver.current_url}&page={page}")
+            for job_posting_link in all_job_posting_links_on_page:
+                IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
+                all_job_posting_applications.append(job_posting_link.get_attribute("href"))
+            
+            try:
+                next_page: WebElement = driver.find_element(By.XPATH, Indeed.selectors.xpath.next_page_button)
+                next_page.click()
+                all_job_posting_links_on_page = IndeedBot.page.retrieve_results_on_page(driver, 2)
                 
-                if response.status_code == 200:
-
-                    driver.get(f"{driver.current_url}&page={page}")
-
-                    all_job_posting_links_on_page = IndeedBot.page.retrieve_results_on_page(driver, 2)
-
-                    for job_posting_link in all_job_posting_links_on_page:
-                        IndeedBot.show_where_bots_going(job_posting_link.get_attribute("href"))
-                        all_job_posting_applications.append(job_posting_link.get_attribute("href"))
-                    page += 1
-
-                
-
-
-
+            except NoSuchElementException:
+                print("No next page found for this query")
+                has_next_page = False
 
         # pauses the page for an hour to get the developer time to inspect site code
         IndeedBot.page.pause_page(time_in_minutes = 60)

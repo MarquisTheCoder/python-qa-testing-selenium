@@ -37,7 +37,8 @@ class Indeed:
 
         class xpath:
             captcha_iframe:str = '/html/body/div[1]/div[2]/main/div/div/div[2]/div/form/div[2]/div/iframe'
-            home_logo:str = '/html/body/nav/div/div/div[1]/a[1]' 
+            home_logo:str = '/html/body/nav/div/div/div[1]/a[1]'
+            next_page_button:str = "/html/body/main/div/div[1]/div/div/div[5]/div[1]/nav/div[3]/a"
 
         class ids:
             authentiication_password_fallback:str  = "auth-page-google-password-fallback" 
