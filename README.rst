@@ -50,7 +50,8 @@ Features
 Quick Start
 -----------
 
-`Register an account with Indeed <https://secure.indeed.com/auth?hl=en_US&co=US&continue=https%3A%2F%2Fwww.indeed.com%2F%3Ffrom%3Dgnav-util-homepage&tmpl=desktop&service=my&from=gnav-util-homepage&jsContinue=https%3A%2F%2Fwww.indeed.com%2F&empContinue=https%3A%2F%2Faccount.indeed.com%2Fmyaccess>`_. and make sure to verify email and phone number.
+`Register an account with Indeed <https://secure.indeed.com/auth?hl=en_US&co=US&continue=https%3A%2F%2Fwww.indeed.com%2F%3Ffrom%3Dgnav-util-homepage&tmpl=desktop&service=my&from=gnav-util-homepage&jsContinue=https%3A%2F%2Fwww.indeed.com%2F&empContinue=https%3A%2F%2Faccount.indeed.com%2Fmyaccess>`_ (if you don't have an account) this is step is very easy as you can make an account with your google, apple, or facebook account.
+
 
 .. code:: bash
 
@@ -65,4 +66,3 @@ If this library helped you out feel free to donate.
 - ETH: 0xE15e32Fb4e0CBC49a899F7BFeb0601f94375b07c
 - LTC: ltc1qj6dc62fg9v5wfyahg2xsttmzmade6zpe5grlcm
 - BTC: bc1qy3gu3dzhfkpy5d6kmugymkfg2w7g23q6h7fp05
-
