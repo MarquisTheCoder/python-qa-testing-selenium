@@ -1,5 +1,5 @@
 =================================
-Welcome to python-indeedbot v1.0.0
+Welcome to python-indeedbot v1.0.0 (UNDER DEVELOPMENT)
 =================================
 
 Updated 04 April 2023
