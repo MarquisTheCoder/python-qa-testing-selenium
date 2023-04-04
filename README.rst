@@ -4,23 +4,21 @@ Welcome to python-indeedbot v1.0.0
 
 Updated 04 April 2023
 
-.. image:: https://img.shields.io/pypi/v/python-binance.svg
-    :target: https://pypi.python.org/pypi/python-binance
 
 .. image:: https://img.shields.io/pypi/l/python-binance.svg
-    :target: https://pypi.python.org/pypi/python-binance
+    :target: https://github.com/MarquisTheCoder/python-indeedbot
 
 .. image:: https://img.shields.io/travis/sammchardy/python-binance.svg
-    :target: https://travis-ci.org/sammchardy/python-binance
+    :target: https://github.com/MarquisTheCoder/python-indeedbot
 
 .. image:: https://img.shields.io/coveralls/sammchardy/python-binance.svg
-    :target: https://coveralls.io/github/sammchardy/python-binance
+    :target: https://github.com/MarquisTheCoder/python-indeedbot
 
 .. image:: https://img.shields.io/pypi/wheel/python-binance.svg
-    :target: https://pypi.python.org/pypi/python-binance
+    :target: https://github.com/MarquisTheCoder/python-indeedbot
 
 .. image:: https://img.shields.io/pypi/pyversions/python-binance.svg 
-    :target: https://pypi.python.org/pypi/python-binance
+    :target: https://github.com/MarquisTheCoder/python-indeedbot
     
 |
 
@@ -35,9 +33,6 @@ README
 Source code
   https://github.com/MarquisTheCoder/python-indeedbot
 
-Documentation
-  https://python-binance.readthedocs.io/en/latest/
-
 Bot Telegram
   https://t.me/python_indeedbot
 
@@ -51,15 +46,6 @@ Features
 - Resume handling for the application process
 - Emailed updates to for updates and success or failure
 
-Upgrading to v1.0.0+
---------------------
-The breaking changes include the migration from wapi to sapi endpoints which related to the
-wallet endpoints detailed in the `Binance Docs <https://binance-docs.github.io/apidocs/spot/en/#wallet-endpoints>`_
-
-The other breaking change is for websocket streams and the Depth Cache Manager which have been
-converted to use Asynchronous Context Managers. See examples in the Async section below or view the
-`websockets <https://python-binance.readthedocs.io/en/latest/websockets.html>`_ and
-`depth cache <https://python-binance.readthedocs.io/en/latest/depth_cache.html>`_ docs.
 
 Quick Start
 -----------
@@ -76,7 +62,7 @@ Donate
 
 If this library helped you out feel free to donate.
 
-- ETH: 0xD7a7fDdCfA687073d7cC93E9E51829a727f9fE70
-- LTC: LPC5vw9ajR1YndE1hYVeo3kJ9LdHjcRCUZ
-- NEO: AVJB4ZgN7VgSUtArCt94y7ZYT6d5NDfpBo
-- BTC: 1Dknp6L6oRZrHDECRedihPzx2sSfmvEBys
+- ETH: 0xE15e32Fb4e0CBC49a899F7BFeb0601f94375b07c
+- LTC: ltc1qj6dc62fg9v5wfyahg2xsttmzmade6zpe5grlcm
+- BTC: bc1qy3gu3dzhfkpy5d6kmugymkfg2w7g23q6h7fp05
+
