@@ -1,11 +1,6 @@
 =================================
 Welcome to python-indeedbot v1.0.0
 =================================
-=================================
-       (UNDER DEVELOPMENT)
-=================================
-Updated 04 April 2023
-
 
 .. image:: https://img.shields.io/pypi/l/python-binance.svg
     :target: https://github.com/MarquisTheCoder/python-indeedbot
