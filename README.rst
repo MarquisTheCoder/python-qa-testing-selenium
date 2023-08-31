@@ -1,5 +1,6 @@
 =================================
-Welcome to python-indeedbot v1.0.0
+Welcome to python-qa-testing-selenium 
+Indeed Bot
 =================================
 
 .. image:: https://img.shields.io/pypi/l/python-binance.svg
